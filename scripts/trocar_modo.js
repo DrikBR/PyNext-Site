@@ -16,23 +16,23 @@ function trocar() {
         const siteescuro = site.classList.contains('dark');
 
         if (siteescuro) {
-            icone.src = "./imagens/sol.png";
+            icone.src = "../imagens/sol.png";
             textobot.textContent = "Modo Claro";
             if (logo) {
-                logo.src = "./imagens/logoescura.png";
+                logo.src = "../imagens/logoescura.png";
             }
             if (fundo) {
-                fundo.style.backgroundImage = "url('./imagens/logoescura.png')";
+                fundo.style.backgroundImage = "url('../imagens/logoescura.png')";
             }
             
         } else {
-            icone.src = "./imagens/lua.png";
+            icone.src = "../imagens/lua.png";
             textobot.textContent = "Modo Escuro";
             if (logo) {
-                logo.src = "./imagens/logoclara.png";
+                logo.src = "../imagens/logoclara.png";
             }
             if (fundo) {
-                fundo.style.backgroundImage = "url('./imagens/logoclara.png')";
+                fundo.style.backgroundImage = "url('../imagens/logoclara.png')";
             }
         }
     });

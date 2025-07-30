@@ -1,38 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="h-full w-full" id="site">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {},
+            },
+        };
+    </script>
 </head>
-<body>
-    <div class = "Login">
-        <h1>Login</h1> <br>
-
-        <form action="recursos.html" id="loginForm" name="formu">
-
-            <label for="email">E-MAIL::</label>
-            <input type="email" id="email" name="email" required placeholder="Ex: Maria.12345@gmail.com">
-            <div id="emailErrado" class="erro"></div>
-            <div id="emailCerto" class="sucesso"></div><br>
-
-            <label for="senha">SENHA:</label>
-            <input type="password" id="senha" name="senha" required placeholder="**********">
-            <div id="senhaErrada" class="erro"></div>
-            <div id="senhaCerta" class="sucesso"></div><br>
+<body class="bg-amber-200 dark:bg-gray-700 font-serif h-full w-full">
+    
+    <div class="flex h-screen justify-center items-center">
+        <div class="bg-white dark:bg-gray-800 flex flex-col justify-center items-center rounded-2xl w-1/4 pt-5">
+            <img id="logo" src="./imagens/logoclara.png" alt="" class="w-2/5 h-2/5">
             
-            <button type="submit">Entrar</button> <br> <br> <br>
-        
-            <label class="cadastro" for="DisMot">Não tem cadastro ainda?
-            <select class="DisMot" id="DisMot" name="escolha1" onchange="verificarEscolha()">
-                <option value="" selected disabled>Cadastre-se!</option>
-                <option value ="Discente">Sou Discente</option>
-                <option value ="Motorista">Sou Motorista</option>
-            </select><br><br>
-            </label>
-        </form>
+            <h1 class="text-2xl dark:text-white">Login</h1>
+
+            <form action="" class="gap-3 flex flex-col pb-7 pt-4">
+
+                <input type="email" id="email" name="email" required placeholder="E-mail" class="border p-2 rounded-lg border-gray-400">
+
+                <input type="password" id="senha" name="senha" required placeholder="Senha" class="border p-2 rounded-lg border-gray-400">
+                
+                <p class="text-blue-500">Esqueceu a senha? <a href="" class="underline font-bold">Recupere aqui</a></p>
+
+                <button type="submit" class="bg-yellow-400 font-bold p-2 rounded-lg hover:cursor-pointer dark:bg-white">Entrar</button>
+            
+                <label for="ProfAlu" class="dark:text-white">Não tem uma conta?
+                <select id="ProfAlu" name="escolha" class="bg-yellow-400 p-1.5 rounded-lg text-center ml-1 mt-1 hover:cursor-pointer dark:bg-white dark:border">
+                    <option value="" selected disabled class="hidden">Cadastre-se!</option>
+                    <option value="Professor" class="bg-white text-black selection:bg-gray-900 hover:text-white">Sou Professor</option>
+                    <option value="Aluno" class="bg-white text-black ">Sou Aluno</option>
+                </select>
+                </label>
+            </form>
+        </div>
     </div>
+
+    <button id="trocar" class="fixed bottom-4 left-4 font-bold text-white dark:text-black bg-gray-800 dark:bg-amber-200 px-4 py-2 rounded-lg flex items-center gap-2 hover:cursor-pointer">
+        <img id="icone" src="./imagens/lua.png" alt="" class="h-6 w-6">
+        <span id="textobot">Modo Escuro</span>
+    </button>
+
 </body>
 </html>
-<script src="../scripts/login.js"></script>
+<script src="trocar_modo.js"></script>

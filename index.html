@@ -1,32 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="h-full w-full">
+<html lang="pt-br" id="site" class="h-max w-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PyNext</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {},
+            },
+        };
+    </script>
 </head>
-<body class="h-full font-serif w-full relative bg-gray-800 p-4 overflow-x-hidden mt-8">
+<body class="h-full font-serif w-full relative bg-amber-200 dark:bg-gray-800 p-4 overflow-x-hidden mt-8">
     <!-- imagem de fundo -->
-    <div class="fixed inset-0 bg-[url('./logo.png')] bg-no-repeat bg-center bg-fixed opacity-30 z-0" style="background-size: 25%;"></div>
+    <div id="fundo" class="fixed inset-0 bg-no-repeat bg-center bg-fixed opacity-30 z-0" style="background-size: 23.8%; background-image: url(./imagens/logoclara.png);"></div>
   
-    <!-- Conteúdo da página -->
-    <div class="relative z-10 text-white p-4 flex flex-col gap-60">
-      <div class="gap-20 flex flex-col justify-center items-center">
-        <h1 class="text-7xl ">Bem-vindo ao</h1>
-        <img src="logo.png" alt="" class="h-1/4 w-1/4">
+    <!-- Resto -->
+    <div class="relative z-10 dark:text-white text-black p-4 flex flex-col gap-60">
+      <div class="gap-16 dark:gap-20 flex flex-col justify-center items-center">
+        <h1 class="text-7xl">Bem-vindo ao</h1>
+        <img id="logo" src="./imagens/logoclara.png" alt="" class="h-1/4 w-1/4">
       </div>
 
-      <div class="flex flex-col justify-center items-center gap-25 mb-25">
+      <div class="flex flex-col justify-center items-center gap-32 mb-25 h-96">
         <h1 class="text-7xl text-center leading-22">Venha se <br> juntar com <br> a gente</h1>
-        <button class="bg-white text-3xl text-black p-4 rounded-xl hover:cursor-pointer">Fazer Login</button>
+        <button class="dark:bg-white bg-gray-800 text-3xl dark:text-black text-white p-4 rounded-xl hover:cursor-pointer" href>Fazer Login<button>
       </div>
 
     <!-- Botão do modo claro -->
-      <button class="fixed bottom-4 left-4 font-bold text-black bg-amber-200 px-4 py-2 rounded flex items-center gap-2 hover:cursor-pointer">
-      <img src="sol.png" alt="" class="h-6 w-6">Modo Claro</button>
+    <button id="trocar" class="fixed bottom-4 left-4 font-bold text-white dark:text-black bg-gray-800 dark:bg-amber-200 px-4 py-2 rounded-lg flex items-center gap-2 hover:cursor-pointer">
+      <img id="icone" src="./imagens/lua.png" alt="" class="h-6 w-6">
+      <span id="textobot">Modo Escuro</span>
+    </button>
       
     </div>
 
 </body>
 </html>
+<script src="trocar_modo.js"></script>

@@ -37,4 +37,15 @@ function trocar() {
         }
     });
 }
+
+function abrirjanela () {
+    document.getElementById("janela").classList.remove("hidden");
+}
+
+function fecharjanela () {
+    document.getElementById("janela").classList.add("hidden");
+}
+
 window.addEventListener("DOMContentLoaded", trocar);
+window.addEventListener("DOMContentLoaded", abrirjanela);
+window.addEventListener("DOMContentLoaded", fecharjanela);

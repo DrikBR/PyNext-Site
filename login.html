@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {},
-            },
-        };
-    </script>
+    <script>tailwind.config = {darkMode: 'class',theme: {extend: {},},};</script>
 </head>
 <body class="bg-amber-200 dark:bg-gray-700 font-serif h-full w-full">
     
@@ -33,7 +26,7 @@
                 <button type="submit" class="bg-yellow-400 font-bold p-2 rounded-lg hover:cursor-pointer dark:bg-white">Entrar</button>
             
                 <label for="ProfAlu" class="dark:text-white">Não tem uma conta?
-                <select id="ProfAlu" name="escolha" class="bg-yellow-400 p-1.5 rounded-lg text-center ml-1 mt-1 hover:cursor-pointer dark:bg-white dark:border">
+                <select id="ProfAlu" name="escolha" class="bg-yellow-400 p-1.5 rounded-lg text-center ml-1 mt-1 hover:cursor-pointer dark:bg-white dark:text-black">
                     <option value="" selected disabled class="hidden">Cadastre-se!</option>
                     <option value="Professor" class="bg-white text-black selection:bg-gray-900 hover:text-white">Sou Professor</option>
                     <option value="Aluno" class="bg-white text-black ">Sou Aluno</option>

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="site">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = {darkMode: 'class',theme: {extend: {},},};</script>
 </head>
+
+<!-- TELA INACABADA E DESATUALIZADA!!!! -->
+
 <body>
     <section class="bg-yellow-400 dark:bg-gray-900">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -47,5 +51,12 @@
             </div>
         </div>
     </section>
+
+    <button id="trocar" class="fixed bottom-4 left-4 font-bold text-white dark:text-black bg-gray-800 dark:bg-amber-200 px-4 py-2 rounded-lg flex items-center gap-2 hover:cursor-pointer">
+        <img id="icone" src="./imagens/lua.png" alt="" class="h-6 w-6">
+        <span id="textobot">Modo Escuro</span>
+    </button>
+
 </body>
 </html>
+<script src="trocar_modo.js"></script>

@@ -46,6 +46,12 @@ function fecharjanela () {
     document.getElementById("janela").classList.add("hidden");
 }
 
+function abrirjanela2 () {
+    document.getElementById("janela2").classList.remove("hidden");
+}
+
+function fecharjanela2 () {
+    document.getElementById("janela2").classList.add("hidden");
+}
+
 window.addEventListener("DOMContentLoaded", trocar);
-window.addEventListener("DOMContentLoaded", abrirjanela);
-window.addEventListener("DOMContentLoaded", fecharjanela);

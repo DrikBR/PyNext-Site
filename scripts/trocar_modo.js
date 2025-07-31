@@ -54,4 +54,36 @@ function fecharjanela2 () {
     document.getElementById("janela2").classList.add("hidden");
 }
 
+function abrirjanela3 () {
+    document.getElementById("janela3").classList.remove("hidden");
+}
+
+function fecharjanela3 () {
+    document.getElementById("janela3").classList.add("hidden");
+}
+
+function abrirjanela4 () {
+    document.getElementById("janela4").classList.remove("hidden");
+}
+
+function fecharjanela4 () {
+    document.getElementById("janela4").classList.add("hidden");
+}
+
+function abrirjanela5 () {
+    document.getElementById("janela5").classList.remove("hidden");
+}
+
+function fecharjanela5 () {
+    document.getElementById("janela5").classList.add("hidden");
+}
+
+function abrirconfig () {
+    document.getElementById("configT").classList.remove("hidden");
+}
+
+function fecharconfig () {
+    document.getElementById("configT").classList.add("hidden");
+}
+
 window.addEventListener("DOMContentLoaded", trocar);

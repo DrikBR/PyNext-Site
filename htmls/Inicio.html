@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página inicial</title>
+    <link rel="icon" type="image/png" href="../imagens/logoescura.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"/>
+    <script> tailwind.config = {darkMode: "class",}; </script>
+</head>
+<body class="bg-[#ffe78f] w-full h-[100svh] flex flex-col dark:bg-[#232c38] font-serif">
+    <header class="p-2 flex justify-between items-center w-full mt-7">
+        <div class="relative group flex justify-center items-center w-1/6">
+            <img src="../imagens/logoclara.png" class="logo w-1/2 hover:cursor-pointer" alt="" onclick="window.location.href='Inicio.html'">
+            <span class="absolute top-full mt-2 px-2 py-1 text-sm text-white dark:text-black bg-gray-700 dark:bg-amber-200 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold"> PyNext - Página Inicial</span>
+        </div>
+        <div class="flex justify-center items-center w-2/3 gap-32">
+            <h1 class="flex justify-center items-center w-1/4 border-4 border-black dark:border-white dark:text-white p-4 rounded-xl text-3xl font-bold text-nowrap">Página inicial</h1>
+        </div>
+        <div class="relative group flex justify-center items-center w-1/6">
+            <img src="../imagens/config.png" alt="" class="w-1/4 hover:cursor-pointer dark:invert hidden">
+        </div>
+    </header>
+    <main class="flex flex-col text-center itens-center justify-center mt-7">
+        <div class="flex flex-col text-center itens-center justify-center m-auto gap-12">
+            <p class="p-2 text-7xl text-black dark:text-white leading-normal">
+                O <b>PyNext</b> é um ambiente de <br> programação online para novatos <br> com dicas de próximo passo
+            </p>
+            <div class="flex flex-col items-center gap-4 p-2 md:flex-row md:gap-44 md:justify-center">
+                <button class="dark:bg-white bg-gray-800 dark:text-black text-white px-6 py-4 text-3xl rounded-md shadow-[0_5px_15px_rgba(0,0,0,0.35)]" onclick="window.location.href='atividades.html'">
+                    Lista de atividades
+                </button>
+                <button class="dark:bg-white bg-gray-800 dark:text-black text-white px-12 py-4 text-3xl rounded-md shadow-[0_5px_15px_rgba(0,0,0,0.35)]" onclick="window.location.href='turmavirtual.html'">
+                    Turma Virtual
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <button id="trocar" class="fixed bottom-4 left-4 font-bold text-white dark:text-black bg-gray-800 dark:bg-amber-200 px-4 py-2 rounded-lg flex items-center gap-2 hover:cursor-pointer">
+            <img id="icone" src="../imagens/lua.png" alt="" class="h-6 w-6">
+            <span id="texto">Modo Escuro</span>
+        </button>
+    </footer>
+</body>
+</html>
+<script src="../scripts/trocar_modo.js"></script>

@@ -15,8 +15,8 @@
             <span class="absolute top-full mt-2 px-2 py-1 text-sm text-white dark:text-black bg-gray-800 dark:bg-amber-200 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold"> PyNext - Página Inicial</span>
         </div>
         <div class="flex justify-center items-center w-2/3 gap-32">
-            <h1 class="flex justify-center items-center w-1/3 bg-gray-800 text-white dark:bg-gray-700 dark:border-4 dark:border-white p-4 rounded-xl text-3xl font-bold text-nowrap">Lista de Atividades</h1>
-                <div class=" flex justify-center items-center dark:text-white dark:bg-gray-800 w-80 bg-white p-2 border rounded-xl border-gray-500 shadow-md shadow-black dark:shadow-amber-200">
+            <h1 class="flex justify-center items-center w-1/3 bg-amber-300 border-black dark:bg-gray-800 dark:text-white border-4 dark:border-white p-4 rounded-xl text-3xl font-bold text-nowrap">Lista de Atividades</h1>
+                <div class=" flex justify-center items-center dark:text-white dark:bg-gray-800 w-80 bg-white p-2 border rounded-xl border-gray-500 shadow-md shadow-black dark:shadow-white">
                     <input type="text" placeholder="Buscar atividade" class="border-r-2 text-center italic focus:outline-none text-2xl dark:bg-gray-800">
                     <button>
                         <img src="../imagens/lupa.png" class="w-full dark:invert" alt="">
@@ -24,7 +24,7 @@
                 </div>
         </div>
         <div class="relative group flex justify-center items-center w-1/6">
-            <img src="../imagens/config.png" alt="" class="w-1/4 hover:cursor-pointer dark:invert">
+            <img src="../imagens/config.png" onclick="window.location.href='CadastroAtv.html'" alt="" class="w-1/4 hover:cursor-pointer dark:invert">
             <span class="absolute top-full mt-2 px-2 py-1 text-sm text-white dark:text-black bg-gray-800 dark:bg-amber-200 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold">Cadastrar atividade</span>
         </div>
     </header>
@@ -32,11 +32,11 @@
     <div class="flex h-2/3 justify-center items-center">
         <div class="flex flex-col justify-center gap-16 items-center h-full w-2/3">
             <!-- Atividade 01 -->
-            <div class="bg-white dark:bg-gray-800 w-full h-2/5 flex flex-col p-9 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-amber-200 hover:cursor-pointer">
+            <div class="bg-white dark:bg-gray-800 w-full h-2/5 flex flex-col p-9 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white hover:cursor-pointer">
                 <!-- Título -->
                 <div class="flex items-center gap-4">
                     <h1 class="text-4xl font-bold dark:text-white">Atividade 01</h1>
-                    <div class="relative group" onclick="abrirjanela()">
+                    <div class="relative group" onclick="document.getElementById('janela').classList.remove('hidden')">
                         <img class="dark:invert w-8" src="../imagens/edit.png" alt="">
                         <span class="absolute bottom-full mb-2 px-2 py-1 text-sm text-white dark:text-black bg-gray-800 dark:bg-amber-200 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold whitespace-nowrap"> Editar Atividade</span>
                     </div>
@@ -50,17 +50,17 @@
                                     <label for="titulo">Título: </label>
                                     <input type="text" name="titulo" id="titulo" value="Atividade 01" placeholder="Nome da atividade" class="italic focus:outline-none dark:bg-gray-800 w-5/6 dark:text-gray-300 text-gray-600">
                                 </div>
-                                <div class="border-2 rounded-xl p-3 w-5/6 flex items-center gap-2 text-lg dark:bg-gray-800 dark:text-white">
+                                <div class="border-2 rounded-xl p-3 w-5/6 flex gap-2 text-lg dark:bg-gray-800 dark:text-white">
                                     <label for="descricao">Descrição: </label>
-                                    <input type="text" name="descricao" id="descricao" value="Laços de repetição" placeholder="Descreva a atividade" class="italic focus:outline-none dark:bg-gray-800 w-5/6 dark:text-gray-300 text-gray-600">
+                                    <textarea name="descricao" id="descricao" placeholder="Descreva a atividade" class="italic focus:outline-none dark:bg-gray-800 w-5/6 dark:text-gray-300 text-gray-600">Laços de repetição</textarea>
                                 </div>
                                 <div class="border-2 rounded-xl p-3 w-5/6 flex items-center gap-2 text-lg dark:bg-gray-800 dark:text-white">
                                     <label for="prazo">Prazo: </label>
                                     <input type="date" name="prazo" id="prazo" value="2025-06-12" placeholder="Defina um prazo" class="italic focus:outline-none dark:bg-[#e0d6c8] w-5/6 dark:text-[#2e2a24] text-gray-600 dark:invert">
                                 </div>
-                                <div class="border-2 rounded-xl p-3 w-5/6 flex items-center text-lg dark:bg-gray-800 dark:text-white">
+                                <div class="border-2 rounded-xl p-3 w-5/6 flex text-lg dark:bg-gray-800 dark:text-white">
                                     <label for="passo" class="w-1/3">Passo a Passo: </label>
-                                    <input type="text" name="passo" id="passo" placeholder="Defina o passo a passo" class="italic focus:outline-none text-gray-600 dark:bg-gray-800 w-2/3 dark:text-gray-300">
+                                    <textarea name="passo" id="passo" placeholder="Defina o passo a passo" class="italic focus:outline-none text-gray-600 dark:bg-gray-800 w-2/3 dark:text-gray-300"></textarea>
                                 </div>
                                 <div class="border-2 rounded-xl p-3 w-3/4 flex flex-col items-center text-lg gap-2 dark:bg-gray-800 dark:text-white">
                                     <h1 class="text-yellow-500 dark:text-white font-bold">Turmas adicionadas na atividade:</h1>
@@ -76,8 +76,8 @@
                                     
                                 <!-- Botões pra fechar -->
                                 <div class="flex justify-between items-center w-3/4 gap-5">
-                                    <button type="button" onclick="fecharjanela()" class="bg-yellow-400 dark:bg-white dark:text-black p-2 font-bold rounded-xl w-1/2">Cancelar</button>
-                                    <button type="submit" onclick="fecharjanela()" class="bg-yellow-400 p-2 font-bold rounded-xl w-1/2 dark:bg-white dark:text-black">Confirmar</button>
+                                    <button type="button" onclick="document.getElementById('janela').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Cancelar</button>
+                                    <button type="submit" onclick="document.getElementById('janela').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Confirmar</button>
                                 </div>
                             </form>
                             
@@ -89,11 +89,11 @@
                 <p class="self-start text-2xl dark:text-white">Prazo: 12/06/2025</p>
             </div>
             <!-- Atividade 02 -->
-            <div class="bg-white w-full h-2/5 flex flex-col p-9 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-amber-200 dark:bg-gray-800 hover:cursor-pointer">
+            <div class="bg-white w-full h-2/5 flex flex-col p-9 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white dark:bg-gray-800 hover:cursor-pointer">
                 <!-- Título 02-->
                 <div class="flex items-center gap-4">
                     <h1 class="text-4xl font-bold dark:text-white">Atividade 02</h1>
-                    <div class="relative group" onclick="abrirjanela2()">
+                    <div class="relative group" onclick="document.getElementById('janela2').classList.remove('hidden')">
                         <img class="dark:invert w-8" src="../imagens/edit.png" alt="">
                         <span class="absolute bottom-full mb-2 px-2 py-1 text-sm text-white dark:text-black bg-gray-800 dark:bg-amber-200 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold whitespace-nowrap"> Editar Atividade</span>
                     </div>
@@ -107,17 +107,17 @@
                                     <label for="titulo">Título: </label>
                                     <input type="text" name="titulo" id="titulo" value="Atividade 02" placeholder="Nome da atividade" class="italic focus:outline-none dark:bg-gray-800 w-5/6 dark:text-gray-300 text-gray-600">
                                 </div>
-                                <div class="border-2 rounded-xl p-3 w-5/6 flex items-center gap-2 text-lg dark:bg-gray-800 dark:text-white">
+                                <div class="border-2 rounded-xl p-3 w-5/6 flex gap-2 text-lg dark:bg-gray-800 dark:text-white">
                                     <label for="descricao">Descrição: </label>
-                                    <input type="text" name="descricao" id="descricao" value="Estruturas Condicionais" placeholder="Descreva a atividade" class="italic focus:outline-none dark:bg-gray-800 w-5/6 dark:text-gray-300 text-gray-600">
+                                    <textarea name="descricao" id="descricao" placeholder="Descreva a atividade" class="italic focus:outline-none dark:bg-gray-800 w-5/6 dark:text-gray-300 text-gray-600">Laços de repetição</textarea>
                                 </div>
                                 <div class="border-2 rounded-xl p-3 w-5/6 flex items-center gap-2 text-lg dark:bg-gray-800 dark:text-white">
                                     <label for="prazo">Prazo: </label>
                                     <input type="date" name="prazo" id="prazo" value="2025-07-14" placeholder="Defina um prazo" class="italic focus:outline-none dark:bg-[#e0d6c8] w-5/6 dark:text-[#2e2a24] text-gray-600 dark:invert">
                                 </div>
-                                <div class="border-2 rounded-xl p-3 w-5/6 flex items-center text-lg dark:bg-gray-800 dark:text-white">
+                                <div class="border-2 rounded-xl p-3 w-5/6 flex text-lg dark:bg-gray-800 dark:text-white">
                                     <label for="passo" class="w-1/3">Passo a Passo: </label>
-                                    <input type="text" name="passo" id="passo" placeholder="Defina o passo a passo" class="italic focus:outline-none text-gray-600 dark:bg-gray-800 w-2/3 dark:text-gray-300">
+                                    <textarea name="passo" id="passo" placeholder="Defina o passo a passo" class="italic focus:outline-none text-gray-600 dark:bg-gray-800 w-2/3 dark:text-gray-300"></textarea>
                                 </div>
                                 <div class="border-2 rounded-xl p-3 w-3/4 flex flex-col items-center text-lg gap-2 dark:bg-gray-800 dark:text-white">
                                     <h1 class="text-yellow-500 dark:text-white font-bold">Turmas adicionadas na atividade:</h1>
@@ -133,8 +133,8 @@
                                     
                                 <!-- Botões pra fechar 02-->
                                 <div class="flex justify-between items-center w-3/4 gap-5">
-                                    <button type="button" onclick="fecharjanela2()" class="bg-yellow-400 dark:bg-white dark:text-black p-2 font-bold rounded-xl w-1/2">Cancelar</button>
-                                    <button type="submit" onclick="fecharjanela2()" class="bg-yellow-400 p-2 font-bold rounded-xl w-1/2 dark:bg-white dark:text-black">Confirmar</button>
+                                    <button type="button" onclick="document.getElementById('janela2').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Cancelar</button>
+                                    <button type="submit" onclick="document.getElementById('janela2').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Confirmar</button>
                                 </div>
                             </form>
                             

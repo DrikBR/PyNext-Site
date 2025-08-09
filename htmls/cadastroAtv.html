@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Atividades</title>
+  <link rel="icon" type="image/png" href="../imagens/logoescura.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = {darkMode: 'class',theme: {extend: {},},};</script>
+</head>
+
+<body class="font-serif">
+  <section class="bg-amber-200 dark:bg-gray-800">
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+      <!-- Caixa de login -->
+      <div class="relative w-full max-w-md rounded-2xl shadow bg-white dark:bg-gray-700">
+        
+        <!-- Imagem de fundo com opacidade controlada -->
+        <div class="logo absolute inset-0 bg-center bg-cover bg-no-repeat opacity-45 rounded-lg z-0 top-20" style="background-size: 95%; background-image: url(../imagens/logoclara.png);"></div>
+
+        <!-- Conteúdo da caixa -->
+        <div class="relative z-10 p-6 space-y-4 md:space-y-6 sm:p-8">
+          <div class="dark:bg-gray-800 p-2 rounded text-center">
+            <h1 class="text-xl font-bold leading-tight tracking-tight md:text-2xl py-2 bg-amber-200 text-black dark:bg-gray-800 dark:text-white">
+              Cadastrar Atividade
+            </h1>
+          </div>
+
+          <form class="flex flex-col gap-2" action="atividades.html">
+            <div>
+              <label for="titulo" class="block mb-2 text-xl font-serif dark:text-white">Título</label>
+              <input type="text" name="titulo" id="titulo" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Laços de Repetição" required="">
+            </div>
+
+            <div>
+              <label for="descricao" class="block mb-2 text-xl font-serif dark:text-white">Descrição</label>
+              <textarea name="descricao" id="descricao" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Utilizando os materiais utilizados em sala, resolva..." required=""></textarea>
+            </div>
+
+            <div>
+              <label for="data" class="block mb-2 text-xl font-serif dark:text-white">Prazo</label>
+              <input type="date" name="data" id="data" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-[#e0d6c8] dark:border-[#EEE7D8] dark:text-[#2e2a24] dark:invert dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" />
+            </div>
+
+            <div>
+              <label for="passos" class="block mb-2 text-xl font-serif dark:text-white">Passos</label>
+              <textarea name="passos" id="passos" class="w-full h-20 bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block p-2.5 dark:bg-gray-800 dark:border-gray-900 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 text-start" required=""> </textarea>
+            </div>
+
+            <div class="flex gap-6 justify-center mt-5">
+              <button type="button" onclick="window.location.href='atividades.html'" class="w-40 bg-yellow-400 dark:bg-white font-serif rounded-lg text-base px-5 py-2.5 text-center font-bold shadow-md dark:shadow-lg shadow-black dark:shadow-black">
+                Cancelar
+              </button>
+              <button type="submit" class="w-40 bg-yellow-400 dark:bg-white font-serif rounded-lg text-base px-5 py-2.5 text-center font-bold shadow-md dark:shadow-lg shadow-black dark:shadow-black">
+                Cadastrar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <button id="trocar" class="fixed bottom-4 left-4 font-bold text-white dark:text-black bg-gray-800 dark:bg-amber-200 px-4 py-2 rounded-lg flex items-center gap-2 hover:cursor-pointer">
+    <img id="icone" src="../imagens/lua.png" alt="" class="h-6 w-6">
+    <span id="texto">Modo Escuro</span>
+  </button>
+
+</body>
+</html>
+<script src="../scripts/trocar_modo.js"></script>

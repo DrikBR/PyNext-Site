@@ -29,15 +29,15 @@
                 <form action="" class="relative flex flex-col justify-center items-center gap-5 w-full">
                     <div class="border-2 rounded-xl p-3 w-3/4 flex flex-col items-start text-lg gap-2 dark:bg-gray-800 dark:text-white">
                         <label for="aluno1" class="flex gap-1 items-center">
-                            <input type="checkbox" name="aluno1" id="aluno1" value="Tiago" class="accent-yellow-400 dark:accent-gray-500 w-5 h-5"> <br>
+                            <input type="checkbox" name="aluno1" id="aluno1" value="Tiago" class="accent-yellow-400 dark:accent-gray-500 w-5 h-5 hover:cursor-pointer"> <br>
                             <span>Tiago Cruz Lopes</span>
                         </label>
                         <label for="aluno2" class="flex gap-1 items-center justify-center">
-                            <input type="checkbox" name="aluno2" id="aluno2" value="Filipa" class="accent-yellow-400 dark:accent-gray-500 w-5 h-5"> <br>
+                            <input type="checkbox" name="aluno2" id="aluno2" value="Filipa" class="accent-yellow-400 dark:accent-gray-500 w-5 h-5 hover:cursor-pointer"> <br>
                             <span>Filipa Agustina Barreto</span>
                         </label>
                         <label for="aluno3" class="flex gap-1 items-center justify-center">
-                            <input type="checkbox" name="aluno3" id="aluno3" value="Felipe" class="accent-yellow-400 dark:accent-gray-500 w-5 h-5"> <br>
+                            <input type="checkbox" name="aluno3" id="aluno3" value="Felipe" class="accent-yellow-400 dark:accent-gray-500 w-5 h-5 hover:cursor-pointer"> <br>
                             <span>Felipe Diogo Nunes</span>
                         </label>
                     </div>
@@ -48,8 +48,8 @@
                     </div>
                     <!-- Botões pra fechar turma-->
                     <div class="flex justify-between items-center w-3/4 gap-5">
-                        <button type="button" onclick="document.getElementById('configT').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Cancelar</button>
-                        <button type="submit" onclick="document.getElementById('configT').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Confirmar</button>
+                        <button type="button" onclick="document.getElementById('configT').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Cancelar</button>
+                        <button type="submit" onclick="document.getElementById('configT').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Confirmar</button>
                     </div>
                 </form>
                 
@@ -60,7 +60,7 @@
     <div class="flex h-2/3 justify-center items-center">
         <div class="flex flex-col justify-center gap-8 items-center h-full w-2/3">
             <!-- Aluno 01 -->
-            <div class="bg-white dark:bg-gray-800 w-full py-3 flex px-6 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white">
+            <div id="joao" class="bg-white dark:bg-gray-800 w-full py-3 flex px-6 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white">
                 <h1 class="text-3xl font-bold dark:text-white max-w-2xl">João da Silva Nunes</h1>
                 <!-- Div dos ícones -->
                 <div class="flex items-center gap-5">
@@ -87,13 +87,13 @@
                         
                         <!-- Botões pra fechar -->
                         <div class="flex justify-between items-center w-full gap-12">
-                            <button type="button" onclick="document.getElementById('janela').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Cancelar</button>
-                            <button type="button" onclick="document.getElementById('janela').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Confirmar</button>
+                            <button type="button" onclick="document.getElementById('janela').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Cancelar</button>
+                            <button type="button" onclick="document.getElementById('joao').classList.add('hidden'); document.getElementById('janela').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Confirmar</button>
                         </div>
                     </div>
                 </div>
             <!-- Aluno 02 -->
-            <div class="bg-white dark:bg-gray-800 w-full py-3 flex px-6 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white">
+            <div id="maria" class="bg-white dark:bg-gray-800 w-full py-3 flex px-6 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white">
                 <h1 class="text-3xl font-bold dark:text-white max-w-2xl">Maria Belarmina do Socorro</h1>
                 <!-- Div dos ícones 02-->
                 <div class="flex items-center gap-5">
@@ -120,13 +120,13 @@
                         
                         <!-- Botões pra fechar 02-->
                         <div class="flex justify-between items-center w-full gap-12">
-                            <button type="button" onclick="document.getElementById('janela2').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Cancelar</button>
-                            <button type="button" onclick="document.getElementById('janela2').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Confirmar</button>
+                            <button type="button" onclick="document.getElementById('janela2').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Cancelar</button>
+                            <button type="button" onclick="document.getElementById('maria').classList.add('hidden'); document.getElementById('janela2').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Confirmar</button>
                         </div>
                     </div>
                 </div>
             <!-- Aluno 03 -->
-            <div class="bg-white dark:bg-gray-800 w-full py-3 flex px-6 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white">
+            <div id="pedro" class="bg-white dark:bg-gray-800 w-full py-3 flex px-6 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white">
                 <h1 class="text-3xl font-bold dark:text-white max-w-2xl">Pedro Vasconcelos Oliveira</h1>
                 <!-- Div dos ícones 03-->
                 <div class="flex items-center gap-5">
@@ -153,13 +153,13 @@
                         
                         <!-- Botões pra fechar 03-->
                         <div class="flex justify-between items-center w-full gap-12">
-                            <button type="button" onclick="document.getElementById('janela3').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Cancelar</button>
-                            <button type="button" onclick="document.getElementById('janela3').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Confirmar</button>
+                            <button type="button" onclick="document.getElementById('janela3').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Cancelar</button>
+                            <button type="button" onclick="document.getElementById('pedro').classList.add('hidden'); document.getElementById('janela3').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Confirmar</button>
                         </div>
                     </div>
                 </div>
             <!-- Aluno 04 -->
-            <div class="bg-white dark:bg-gray-800 w-full py-3 flex px-6 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white">
+            <div id="jessica" class="bg-white dark:bg-gray-800 w-full py-3 flex px-6 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white">
                 <h1 class="text-3xl font-bold dark:text-white max-w-2xl">Jéssica Teresa Gomes</h1>
                 <!-- Div dos ícones 04-->
                 <div class="flex items-center gap-5">
@@ -186,13 +186,13 @@
                         
                         <!-- Botões pra fechar 04-->
                         <div class="flex justify-between items-center w-full gap-12">
-                            <button type="button" onclick="document.getElementById('janela4').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Cancelar</button>
-                            <button type="button" onclick="document.getElementById('janela4').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Confirmar</button>
+                            <button type="button" onclick="document.getElementById('janela4').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Cancelar</button>
+                            <button type="button" onclick="document.getElementById('jessica').classList.add('hidden'); document.getElementById('janela4').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Confirmar</button>
                         </div>
                     </div>
                 </div>
             <!-- Aluno 05 -->
-            <div class="bg-white dark:bg-gray-800 w-full py-3 flex px-6 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white">
+            <div id="leonardo" class="bg-white dark:bg-gray-800 w-full py-3 flex px-6 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white">
                 <h1 class="text-3xl font-bold dark:text-white max-w-2xl">Leonardo Lima Torres</h1>
                 <!-- Div dos ícones 05-->
                 <div class="flex items-center gap-5">
@@ -219,15 +219,15 @@
                         
                         <!-- Botões pra fechar 05-->
                         <div class="flex justify-between items-center w-full gap-12">
-                            <button type="button" onclick="document.getElementById('janela5').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Cancelar</button>
-                            <button type="button" onclick="document.getElementById('janela5').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Confirmar</button>
+                            <button type="button" onclick="document.getElementById('janela5').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Cancelar</button>
+                            <button type="button" onclick="document.getElementById('leonardo').classList.add('hidden'); document.getElementById('janela5').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Confirmar</button>
                         </div>
                     </div>
                 </div>
         </div>
     </div>
 
-    <button id="trocar" class="fixed bottom-4 left-4 font-bold text-white dark:text-black bg-gray-800 dark:bg-amber-200 px-4 py-2 rounded-lg flex items-center gap-2 hover:cursor-pointer">
+    <button id="trocar" class="fixed bottom-4 left-4 font-bold text-white dark:text-black bg-gray-800 dark:bg-amber-200 px-4 py-2 rounded-lg flex items-center gap-2 hover:cursor-pointer shadow-md shadow-black dark:shadow-amber-200 dark:hover:bg-amber-300 hover:bg-gray-900">
         <img id="icone" src="../imagens/lua.png" alt="" class="h-6 w-6">
         <span id="texto">Modo Escuro</span>
     </button>

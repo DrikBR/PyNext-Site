@@ -37,7 +37,7 @@
       
                     <div>
                         <label for="matricula" class="block mb-2 text-xl font-serif dark:text-white">Matrícula</label>
-                        <input type="text" name="matricula" id="matricula" class="bg-gray-50 border border-gray-400 text-gray-900 rounded-lg block w-full p-2.5 dark:bg-gray-800 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white" placeholder="20246785467" required="">
+                        <input type="number" name="matricula" id="matricula" class="bg-gray-50 border border-gray-400 text-gray-900 rounded-lg block w-full p-2.5 dark:bg-gray-800 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white" placeholder="20246785467" required="">
                     </div>
         
                     <div>
@@ -48,8 +48,8 @@
       
                        
                   <div class="flex gap-6 justify-center mt-5"> <!--flex coloca os botões na mesma linha e o gap dá o espaço entre eles-->
-                    <button type="button" onclick="window.location.href='login.html'" class="w-40 bg-yellow-400 dark:bg-white font-serif rounded-lg text-base px-5 py-2.5 text-center font-bold shadow-md dark:shadow-lg shadow-black dark:shadow-black">Cancelar</button>
-                    <button type="submit" class="w-40 bg-yellow-400 dark:bg-white font-serif rounded-lg text-base px-5 py-2.5 text-center font-bold shadow-md dark:shadow-lg shadow-black dark:shadow-black">Cadastrar</button>
+                    <button type="button" onclick="window.location.href='login.html'" class="w-40 bg-yellow-400 dark:bg-white font-serif rounded-lg text-base px-5 py-2.5 text-center font-bold shadow-md dark:shadow-lg shadow-black dark:shadow-black hover:bg-yellow-500 dark:hover:bg-gray-300">Cancelar</button>
+                    <button type="submit" class="w-40 bg-yellow-400 dark:bg-white font-serif rounded-lg text-base px-5 py-2.5 text-center font-bold shadow-md dark:shadow-lg shadow-black dark:shadow-black hover:bg-yellow-500 dark:hover:bg-gray-300">Cadastrar</button>
                   </div>
               </form>
           </div>
@@ -57,7 +57,7 @@
   </div>
 </section>
 
-<button id="trocar" class="fixed bottom-4 left-4 font-bold text-white dark:text-black bg-gray-800 dark:bg-amber-200 px-4 py-2 rounded-lg flex items-center gap-2 hover:cursor-pointer">
+<button id="trocar" class="fixed bottom-4 left-4 font-bold text-white dark:text-black bg-gray-800 dark:bg-amber-200 px-4 py-2 rounded-lg flex items-center gap-2 hover:cursor-pointer shadow-md shadow-black dark:shadow-amber-200 dark:hover:bg-amber-300 hover:bg-gray-900">
     <img id="icone" src="../imagens/lua.png" alt="" class="h-6 w-6">
     <span id="texto">Modo Escuro</span>
 </button>

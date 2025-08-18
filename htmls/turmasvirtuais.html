@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="h-full w-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Turmas</title>
+    <link rel="icon" type="image/png" href="../imagens/logoescura.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = {darkMode: 'class',theme: {extend: {},},};</script>
+</head>
+<body class="bg-amber-200 dark:bg-gray-700 font-serif h-4/5 w-full">
+    <header class="flex justify-between items-center p-5 mt-3 gap-4 mr-7">
+        <div class="relative group flex justify-center items-center w-1/6">
+            <img src="../imagens/logoclara.png" class="logo w-1/2 hover:cursor-pointer" alt="" onclick="window.location.href='Inicio.html'">
+            <span class="absolute top-full mt-2 px-2 py-1 text-sm text-white dark:text-black bg-gray-800 dark:bg-amber-200 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold"> PyNext - Página Inicial</span>
+        </div>
+        <div class="flex justify-center items-center w-2/3 gap-32">
+            <h1 class="flex justify-center items-center border-4 border-black dark:border-white dark:text-white bg-amber-300 dark:bg-gray-800 p-4 rounded-xl text-3xl font-bold text-nowrap">Lista de Turmas Virtuais</h1>
+        </div>
+        <div class="relative group flex justify-center items-center w-1/6">
+            <img src="" alt="" class="w-1/4 hover:cursor-pointer dark:invert hidden">
+        </div>
+    </header>
+<!-- Duas divs para centralizar bunitin as turmas -->
+    <div class="flex h-3/4 justify-center items-center">
+        <div class="grid grid-cols-2 justify-items-center items-center h-3/4 w-2/3">
+            <!-- Turma 01 -->
+            <div class="bg-white dark:bg-gray-800 w-4/5 py-8 flex items-center justify-center rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white hover:bg-gray-200 dark:hover:bg-gray-900 hover:cursor-pointer" onclick="window.location.href = 'turma.html'">
+                <h1 class="text-3xl font-bold dark:text-white max-w-2xl">1811</h1>
+            </div>
+            <!-- Turma 02 -->
+            <div class="bg-white dark:bg-gray-800 w-4/5 py-8 flex items-center justify-center rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white hover:bg-gray-200 dark:hover:bg-gray-900 hover:cursor-pointer" onclick="window.location.href = 'turma.html'">
+                <h1 class="text-3xl font-bold dark:text-white max-w-2xl">1812</h1>
+            </div>
+            <!-- Turma 03 -->
+            <div class="bg-white dark:bg-gray-800 w-4/5 py-8 flex items-center justify-center rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white hover:bg-gray-200 dark:hover:bg-gray-900 hover:cursor-pointer" onclick="window.location.href = 'turma.html'">
+                <h1 class="text-3xl font-bold dark:text-white max-w-2xl">1813</h1>
+            </div>
+            <!-- Turma 04 -->
+            <div class="bg-white dark:bg-gray-800 w-4/5 py-8 flex items-center justify-center rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white hover:bg-gray-200 dark:hover:bg-gray-900 hover:cursor-pointer" onclick="window.location.href = 'turma.html'">
+                <h1 class="text-3xl font-bold dark:text-white max-w-2xl">1814</h1>
+            </div>
+           
+        </div>
+    </div>
+
+    <button id="trocar" class="fixed bottom-4 left-4 font-bold text-white dark:text-black bg-gray-800 dark:bg-amber-200 px-4 py-2 rounded-lg flex items-center gap-2 hover:cursor-pointer shadow-md shadow-black dark:shadow-amber-200 dark:hover:bg-amber-300 hover:bg-gray-900">
+        <img id="icone" src="../imagens/lua.png" alt="" class="h-6 w-6">
+        <span id="texto">Modo Escuro</span>
+    </button>
+
+</body>
+</html>
+<script src="../scripts/trocar_modo.js"></script>

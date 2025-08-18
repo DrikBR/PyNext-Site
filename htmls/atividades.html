@@ -32,16 +32,16 @@
     <div class="flex h-2/3 justify-center items-center">
         <div class="flex flex-col justify-center gap-16 items-center h-full w-2/3">
             <!-- Atividade 01 -->
-            <div class="bg-white dark:bg-gray-800 w-full h-2/5 flex flex-col p-9 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white hover:cursor-pointer">
+            <div class="bg-white dark:bg-gray-800 w-full h-2/5 flex flex-col p-9 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-900" onclick="window.location.href='editorcod.html'">
                 <!-- Título -->
                 <div class="flex items-center gap-4">
                     <h1 class="text-4xl font-bold dark:text-white">Atividade 01</h1>
-                    <div class="relative group" onclick="document.getElementById('janela').classList.remove('hidden')">
+                    <div class="relative group" onclick="event.stopPropagation(); document.getElementById('janela').classList.remove('hidden')">
                         <img class="dark:invert w-8" src="../imagens/edit.png" alt="">
                         <span class="absolute bottom-full mb-2 px-2 py-1 text-sm text-white dark:text-black bg-gray-800 dark:bg-amber-200 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold whitespace-nowrap"> Editar Atividade</span>
                     </div>
                     <!-- Janela do botão editar -->
-                    <div id="janela" class="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 hidden">
+                    <div id="janela" class="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 hidden hover:cursor-default" onclick="event.stopPropagation();">
                         <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl w-1/3 relative flex flex-col justify-center items-center gap-5">
                             <h1 class="text-2xl font-bold mb-4 bg-amber-200 dark:bg-gray-800 dark:text-white p-3">Modificar Atividade:</h1>
                             <!-- Configurações -->
@@ -65,19 +65,19 @@
                                 <div class="border-2 rounded-xl p-3 w-3/4 flex flex-col items-center text-lg gap-2 dark:bg-gray-800 dark:text-white">
                                     <h1 class="text-yellow-500 dark:text-white font-bold">Turmas adicionadas na atividade:</h1>
                                     <label for="turma1" class="flex gap-1 items-center justify-center">
-                                        <input type="checkbox" name="turma1" id="turma1" value="1813" class="accent-yellow-400 dark:accent-gray-500 w-4 h-4">
+                                        <input type="checkbox" name="turma1" id="turma1" value="1813" class="accent-yellow-400 dark:accent-gray-500 w-4 h-4 hover:cursor-pointer">
                                         <span>1813</span>
                                     </label>
                                     <label for="turma2" class="flex gap-1 items-center justify-center">
-                                        <input type="checkbox" name="turma2" id="turma2" value="1814" class="accent-yellow-400 dark:accent-gray-500 w-4 h-4">
+                                        <input type="checkbox" name="turma2" id="turma2" value="1814" class="accent-yellow-400 dark:accent-gray-500 w-4 h-4 hover:cursor-pointer">
                                         <span>1814</span>
                                     </label>
                                 </div>
                                     
                                 <!-- Botões pra fechar -->
                                 <div class="flex justify-between items-center w-3/4 gap-5">
-                                    <button type="button" onclick="document.getElementById('janela').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Cancelar</button>
-                                    <button type="submit" onclick="document.getElementById('janela').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Confirmar</button>
+                                    <button type="button" onclick="event.stopPropagation(); document.getElementById('janela').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Cancelar</button>
+                                    <button type="submit" onclick="event.stopPropagation(); document.getElementById('janela').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Confirmar</button>
                                 </div>
                             </form>
                             
@@ -89,16 +89,16 @@
                 <p class="self-start text-2xl dark:text-white">Prazo: 12/06/2025</p>
             </div>
             <!-- Atividade 02 -->
-            <div class="bg-white w-full h-2/5 flex flex-col p-9 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white dark:bg-gray-800 hover:cursor-pointer">
+            <div class="bg-white w-full h-2/5 flex flex-col p-9 items-center justify-between rounded-3xl shadow-xl dark:shadow-lg shadow-black dark:shadow-white dark:bg-gray-800 hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-900" onclick="window.location.href='editorcod.html'">
                 <!-- Título 02-->
                 <div class="flex items-center gap-4">
                     <h1 class="text-4xl font-bold dark:text-white">Atividade 02</h1>
-                    <div class="relative group" onclick="document.getElementById('janela2').classList.remove('hidden')">
+                    <div class="relative group" onclick="event.stopPropagation(); document.getElementById('janela2').classList.remove('hidden')">
                         <img class="dark:invert w-8" src="../imagens/edit.png" alt="">
                         <span class="absolute bottom-full mb-2 px-2 py-1 text-sm text-white dark:text-black bg-gray-800 dark:bg-amber-200 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold whitespace-nowrap"> Editar Atividade</span>
                     </div>
                     <!-- Janela do botão editar 02-->
-                    <div id="janela2" class="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 hidden">
+                    <div id="janela2" class="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 hidden hover:cursor-default" onclick="event.stopPropagation();">
                         <div class="bg-white dark:bg-gray-700 p-6 rounded-2xl w-1/3 relative flex flex-col justify-center items-center gap-5">
                             <h1 class="text-2xl font-bold mb-4 bg-amber-200 dark:bg-gray-800 dark:text-white p-3">Modificar Atividade:</h1>
                             <!-- Configurações 02-->
@@ -122,19 +122,19 @@
                                 <div class="border-2 rounded-xl p-3 w-3/4 flex flex-col items-center text-lg gap-2 dark:bg-gray-800 dark:text-white">
                                     <h1 class="text-yellow-500 dark:text-white font-bold">Turmas adicionadas na atividade:</h1>
                                     <label for="turma1" class="flex gap-1 items-center justify-center">
-                                        <input type="checkbox" name="turma1" id="turma1" value="1813" class="accent-yellow-400 dark:accent-gray-500 w-4 h-4">
+                                        <input type="checkbox" name="turma1" id="turma1" value="1813" class="accent-yellow-400 dark:accent-gray-500 w-4 h-4 hover:cursor-pointer">
                                         <span>1813</span>
                                     </label>
                                     <label for="turma2" class="flex gap-1 items-center justify-center">
-                                        <input type="checkbox" name="turma2" id="turma2" value="1814" class="accent-yellow-400 dark:accent-gray-500 w-4 h-4">
+                                        <input type="checkbox" name="turma2" id="turma2" value="1814" class="accent-yellow-400 dark:accent-gray-500 w-4 h-4 hover:cursor-pointer">
                                         <span>1814</span>
                                     </label>
                                 </div>
                                     
                                 <!-- Botões pra fechar 02-->
                                 <div class="flex justify-between items-center w-3/4 gap-5">
-                                    <button type="button" onclick="document.getElementById('janela2').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Cancelar</button>
-                                    <button type="submit" onclick="document.getElementById('janela2').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2">Confirmar</button>
+                                    <button type="button" onclick="event.stopPropagation(); document.getElementById('janela2').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Cancelar</button>
+                                    <button type="submit" onclick="event.stopPropagation(); document.getElementById('janela2').classList.add('hidden')" class="bg-yellow-400 dark:bg-white shadow-md dark:shadow-lg shadow-black dark:shadow-black text-black p-2 font-bold rounded-xl w-1/2 hover:bg-yellow-500 dark:hover:bg-gray-300">Confirmar</button>
                                 </div>
                             </form>
                             
@@ -150,7 +150,7 @@
         </div>
     </div>
 
-    <button id="trocar" class="fixed bottom-4 left-4 font-bold text-white dark:text-black bg-gray-800 dark:bg-amber-200 px-4 py-2 rounded-lg flex items-center gap-2 hover:cursor-pointer">
+    <button id="trocar" class="fixed bottom-4 left-4 font-bold text-white dark:text-black bg-gray-800 dark:bg-amber-200 px-4 py-2 rounded-lg flex items-center gap-2 hover:cursor-pointer shadow-md shadow-black dark:shadow-amber-200 dark:hover:bg-amber-300 hover:bg-gray-900">
         <img id="icone" src="../imagens/lua.png" alt="" class="h-6 w-6">
         <span id="texto">Modo Escuro</span>
     </button>

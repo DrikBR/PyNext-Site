@@ -23,6 +23,35 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function atualizarEditor() {
+        const editor = document.getElementById('editor');
+
+        if (editor) {
+            const editorACE = ace.edit('editor');
+            const gutter = document.querySelector(".ace_gutter");
+            const output = document.getElementById('output');
+            const fundoeditor = document.getElementById('fundoeditor');
+
+            if (site.classList.contains('dark')) {
+                editorACE.setTheme("ace/theme/cobalt");
+                editor.style.backgroundColor = '#1F2937';
+                fundoeditor.style.backgroundColor = '#1F2937';
+                output.style.backgroundColor = '#1F2937';
+                editor.style.color = 'white';
+                editor.style.fontWeight = "normal";
+                gutter.style.backgroundColor = "#374151";
+            } else {
+                editorACE.setTheme("ace/theme/clouds");
+                editor.style.color = 'black';
+                editor.style.backgroundColor = '#ffeeac';
+                fundoeditor.style.backgroundColor = '#ffeeac';
+                editor.style.fontWeight = "bolder";
+                gutter.style.backgroundColor = "#ffdd6c";
+                output.style.backgroundColor = "#ffdd6c";
+            }
+        }
+    }
+
     function atualizarLogo() {
         logos.forEach((logo) => {
             const fundo = logo.style.backgroundImage;
@@ -50,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     atualizarTexto();
     atualizarIcone();
     atualizarLogo();
+    atualizarEditor();
 
     botão.addEventListener('click', () => {
         site.classList.toggle('dark');
@@ -63,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         atualizarTexto();
         atualizarIcone();
         atualizarLogo();
+        atualizarEditor();
     });
 });
 

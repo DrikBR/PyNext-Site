@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PyNext - Editor</title>
-    <link rel="icon" type="image/x-icon" href="/imgs/logo2.ico">
+    <link rel="icon" type="image/png" href="../imagens/logoescura.png">
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = {darkMode: 'class',theme: {extend: {},},};</script>
@@ -50,11 +50,11 @@
     
 <div class="container mx-auto my-8 flex space-x-4">
 
-<div class="w-1/2 bg-amber-100 dark:bg-gray-500 p-6 rounded shadow h-80">
-    <div id="editor" style="height: 100%; width: 100%">#your code</div>
+<div id="fundoeditor" class="w-1/2 pt-2 rounded shadow h-80">
+    <div id="editor" style="height: 100%; width: 100%">print("Olá, seja-vindo(a) ao PyNext.")</div>
 </div>
         <!-- Right Side -->
-        <div id="output" class="w-1/2 bg-amber-300 dark:bg-gray-800 text-black dark:text-white p-6 rounded shadow h-80 overflow-scroll border-2 border-black dark:border-white">
+        <div id="output" class="w-1/2 text-black dark:text-white p-6 rounded shadow h-80 overflow-scroll border-2 border-black dark:border-white">
             <p>Olá, seja-vindo(a) ao PyNext.</p>
         </div>
     </div>
@@ -146,5 +146,14 @@
 
 
 </body>
-</html> 
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="../scripts/trocar_modo.js"></script>
+<script>
+    var editor = ace.edit("editor");
+
+    editor.setShowPrintMargin(false);
+    editor.session.setMode("ace/mode/python");
+    document.getElementById('editor').style.fontSize='15px';
+    
+</script>
